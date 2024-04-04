@@ -9,12 +9,11 @@
     Isso eh um teste!!
     <a href="index.html">Currículo</a>
 
-    <h1>Formulário de Exemplo</h1>
+    <h1>Cadastrar Contratante</h1>
 
     <form action="/vizualizacao.html" method="'post">
        
         <fieldset>
-            <legend>Cadastro do Contratante</legend>
             <label for="nome"Nome:></label>
             <label for="nome">Nome Completo</label>
             <input type="text" id="nome" required></input><br>
@@ -22,6 +21,10 @@
             <label for="data_nasc">Data de Nascimento</label>
             <input type="text" pattern="^(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/([0-9]{4})$"
         tittle="Insira uma data no formato dd/mm/aaaa" id="data_nasc" name="data_nasc" required placeholder="dd/mm/aaaa"><br>
+
+            <label for="data_nasc">Seu CPF</label>
+            <input type="text" pattern="^(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/([0-9]{4})$"
+        tittle="Insira um CPF no formato 000.000.000-00" id="cpf" name="cpf" required placeholder="000.000.000-00"><br>
         
             <label for="email">Email:</label>
             <input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -36,6 +39,12 @@
             <label for="genero">Gênero:</label>
             <input type="radio" name="genero" value="masculino"> Masculino
             <input type="radio" name="genero" value="femenino"> Feminino<br>
+
+
+        </fieldset>
+        
+        <fieldset>
+            </select><br>
 
             <label for="cidade">Cidade:</label>
             <input type="text" id="cidade"  required><br>
@@ -75,34 +84,34 @@
 
             <label for="endereço">Endereço: </label>
             <input type="text" pattern="^(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/([0-9]{4})$"
-        tittle="Insira um endereço" id="data_nasc" name="data_nasc" required placeholder="Rua  N° "><br>
+        tittle="Insira um endereço" id="data_nasc" name="data_nasc" ><br>
            
 
+            <label for="tipo de serviço">Tipo de Serviço: </label><br>
+             <select id="serviço" name="serviço">
+                <option value="diarista">Diarista</option>
+                 <option value="cozinheiro(a)">Cozinheiro(a)</option>
+                 <option value="encanador">Encanador</option>
+                 <option value="organizador(a) profissional">Organizador(a) Profissional</option>
+                 <option value="piscineiro">Piscineiro</option>
+                 <option value="professor(a) particular">Professor(a) Particular</option>
+                 <option value="fotográfo(a)">Fotográfo(a)</option>
+                 <option value="estilista">Estilista</option>
+                 <option value="engenheiro">Engenheiro(a)</option>
+                 <option value="uber">Uber</option>
+                 <option value="moto-taxi">Moto-Taxi</option>
+                 <option value="cuidador de idodos">Cuidador (a) de Idosos</option>
+                 <option value="babá">Babá</option>
+                 <option value="tradutor">Tradutor(a)</option>
+                 <option value="freelancer">Freelancer</option>
+                 <option value="eletricista">Eletricista</option>
+                 <option value="outros">Outros</option>
+
+
+            <label for="notificacao">Confirmar Profissiona:</label>
+            <input type="checkbox" id="confirmação" name="confirmação" required> <br> 
+
             
-
-
-
-        </fieldset>
-        
-        <fieldset>
-            <legend>Mensagem</legend>
-            <label for="motivo">Motivo do contato:</label> 
-            <select id="motivo" name="motivo">
-                <option value="duvida">Dúvida</option>
-                <option value="sugestao">Sugestão</option>
-                <option value="elogio">Elogio</option>
-                <option value="outros">Outros</option>
-            </select><br>
-
-            <label for="mensagem">Mensagem: </label><br>
-            <textarea id="mensagem" name="mensagem" rows="4" cols="50"
-placeholder="Digite sua mensagem aqui"></textarea><br>
-
-            <label for="anexo">Anexo:</labe><br>
-            <input type="file" name="arquivo"><br> 
-
-            <label for="notificacao">Aceito receber notificação de resposta:</label>
-            <input type="checkbox" id="notificacao" name="notificacao" required> <br> 
        </fieldset>
    </form>
 
@@ -116,3 +125,5 @@ placeholder="Digite sua mensagem aqui"></textarea><br>
 
 
 
+<label for="anexo">Anexo:</labe><br>
+    <input type="file" name="arquivo"><br> 
